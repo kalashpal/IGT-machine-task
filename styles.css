@@ -1,0 +1,36 @@
+body,ul{
+    margin:0;
+    padding: 0;
+}
+.image-gallery{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: auto;
+
+}
+.image{
+    flex: 1;
+    margin:10px;
+   
+}
+.image-1 img{
+    height: 337px;
+    padding-right: 85px;
+
+    
+}
+.image-2 img{
+    height: 915px;
+    padding-right: 160px;
+}
+.image-4 img{
+    padding-top: 60px;
+    height: 386px;
+}
+.image-5 img{
+    height: 420px;
+    padding-top: 136px;
+}
