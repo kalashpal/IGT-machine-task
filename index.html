@@ -9,10 +9,17 @@
 <body>
     <div class="image-gallery">
         <div class="image image-1">
-            <img src="/free tutorial.jpg" alt="image-1">
+            <img id="first"src="/img.jpg" alt="image-1">
+            <img id="second"src="/text.jpg" alt="image-2">
+          
         </div>
         <div class="image image-2">
             <img src="/features.jpg" alt="image-2">
+            <img id="three"src="/New folder/free-black-down-arrow-clipart-edvt1.webp" alt="" style="    height: 102px;
+            margin-left: -1285px;
+            padding-bottom: 261px;"
+            onclick="scrollToImage3()">
+           
         </div>
         <div class="image image-3">
             <img src="/header.jpg" alt="image-3">
@@ -24,6 +31,29 @@
             <img src="/FAQ.jpg" alt="image-5">
         </div>
     </div>
-    
+    <script>
+        let firstImage=document.getElementById('first');
+        let isSliderVisible=true;
+        function toggleSlider(){
+            if(isSliderVisible){
+                firstImage.style.transform='translateX(100%)';
+                firstImage.style.zIndex=1;
+                isSliderVisible=false;
+            }else{
+                firstImage.style.transform='translateX(0%)';
+                firstImage.style.zIndex=2;
+                isSliderVisible=true;
+            }
+        }
+        setInterval(toggleSlider,3000);
+        function scrollToImage3(){
+            const image3=document.querySelector('.image-3');
+            image3.scrollIntoView({behavior:'smooth'});
+        }
+    </script>
+   
+        
+   
+        
 </body>
 </html>
